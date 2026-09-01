@@ -1,0 +1,31 @@
+:root {
+  --poke-red: #dc2626;
+  --poke-red-dark: #b91c1c;
+  --poke-yellow: #fbbf24;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --bg: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.bg-poke {
+  background: var(--bg);
+}
