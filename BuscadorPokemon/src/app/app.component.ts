@@ -1,50 +1,13 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { Pokemon, PokemonService } from './pokemon.service';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    selector: 'app-root',
+    standalone: true,
+    imports: [RouterOutlet, RouterLink, RouterLinkActive],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
-  query = 'ditto';
-  pokemon: Pokemon | null = null;
-  loading = false;
-  error = '';
-
-  constructor(
-    private pokemonService: PokemonService,
-    private cdr: ChangeDetectorRef
-  ) {}
-
-  buscar(): void {
-    const term = this.query.trim();
-    if (!term) {
-      this.error = 'Escribe el nombre de un Pokémon.';
-      this.pokemon = null;
-      return;
-    }
-
-    this.loading = true;
-    this.error = '';
-    this.pokemon = null;
-
-    this.pokemonService.getPokemon(term).subscribe({
-      next: (data) => {
-        this.pokemon = data;
-        this.loading = false;
-        this.cdr.markForCheck();
-      },
-      error: () => {
-        this.error = `No se encontró ningún Pokémon llamado "${term}".`;
-        this.loading = false;
-        this.cdr.markForCheck();
-      },
-    });
-  }
+    titulo = 'Bienvenidos al Buscador Pokemon con mas Aura de la 3227025 ;D'
 }
