@@ -2,15 +2,25 @@
   <h1>{{ titulo }}</h1>
 
   <nav>
-    <a routerLink="/registro" routerLinkActive="active-tab">
-      Registro Usuario
-    </a>
-    <a routerLink="/buscador" routerLinkActive="active-tab">
-      Buscador Pokemon
-    </a>
+    <a routerLink="/registro" routerLinkActive="active-tab">Registro Usuario</a> | 
+    <a routerLink="/buscador" routerLinkActive="active-tab">Buscador Pokemon</a>
   </nav>
 </header>
 
+<hr>
+
 <main>
+  <h2>Selecciona un Pokémon:</h2>
+  
+  <div>
+    <app-lucario></app-lucario>
+    <app-eevee></app-eevee>
+    <app-snorlax></app-snorlax>
+    <app-gardevoir></app-gardevoir>
+    <app-rayquaza></app-rayquaza>
+    <app-garchomp></app-garchomp>
+  </div>
+
+  <br>
   <router-outlet></router-outlet>
 </main>
