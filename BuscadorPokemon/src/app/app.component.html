@@ -1,26 +1,26 @@
-<header>
-  <h1>{{ titulo }}</h1>
+<header style="padding: 10px; border-bottom: 2px solid #ccc;">
+  <h1>Bienvenidos al Buscador Pokemon con mas Aura de la 3227025 ;D</h1>
 
-  <nav>
-    <a routerLink="/registro" routerLinkActive="active-tab">Registro Usuario</a> | 
-    <a routerLink="/buscador" routerLinkActive="active-tab">Buscador Pokemon</a>
+  <nav style="margin-top: 10px; display: flex; gap: 15px;">
+    <a routerLink="/registro" routerLinkActive="active-tab">Registro Usuario</a> 
+    <a routerLink="/buscador" routerLinkActive="active-tab">Buscador Pokemon</a> 
+    <a routerLink="/listado" routerLinkActive="active-tab">Listado Pokemon</a>
   </nav>
 </header>
 
-<hr>
+<main style="padding: 15px;">
+  <h2>Mis Pokemon</h2>
 
-<main>
-  <h2>Selecciona un Pokémon:</h2>
-  
-  <div>
-    <app-lucario></app-lucario>
-    <app-eevee></app-eevee>
-    <app-snorlax></app-snorlax>
-    <app-gardevoir></app-gardevoir>
-    <app-rayquaza></app-rayquaza>
-    <app-garchomp></app-garchomp>
+  <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
+    <a routerLink="/pokemon/eevee" style="padding: 6px 12px; background-color: #f0f0f0; border-radius: 4px; text-decoration: none;">Eevee</a>
+    <a routerLink="/pokemon/garchomp" style="padding: 6px 12px; background-color: #f0f0f0; border-radius: 4px; text-decoration: none;">Garchomp</a>
+    <a routerLink="/pokemon/gardevoir" style="padding: 6px 12px; background-color: #f0f0f0; border-radius: 4px; text-decoration: none;">Gardevoir</a>
+    <a routerLink="/pokemon/lucario" style="padding: 6px 12px; background-color: #f0f0f0; border-radius: 4px; text-decoration: none;">Lucario</a>
+    <a routerLink="/pokemon/rayquaza" style="padding: 6px 12px; background-color: #f0f0f0; border-radius: 4px; text-decoration: none;">Rayquaza</a>
+    <a routerLink="/pokemon/snorlax" style="padding: 6px 12px; background-color: #f0f0f0; border-radius: 4px; text-decoration: none;">Snorlax</a>
   </div>
 
-  <br>
+  <hr>
+
   <router-outlet></router-outlet>
 </main>

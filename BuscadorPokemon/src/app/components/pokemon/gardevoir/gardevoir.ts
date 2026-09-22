@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './gardevoir.css'
 })
 export class GardevoirComponent {
+  mostrar: boolean = false;
 
-  mostrarNombre() {
-    alert('Has hecho clic en: Gardevoir');
+  verPokemon() {
+    this.mostrar = true;
   }
-
 }

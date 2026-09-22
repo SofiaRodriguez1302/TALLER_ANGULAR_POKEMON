@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './eevee.css'
 })
 export class EeveeComponent {
+  mostrar: boolean = false;
 
-  mostrarNombre() {
-    alert('Has hecho clic en: Eevee');
+  verPokemon() {
+    this.mostrar = true;
   }
-
 }

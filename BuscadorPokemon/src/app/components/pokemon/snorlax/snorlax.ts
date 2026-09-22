@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './snorlax.css'
 })
 export class SnorlaxComponent {
+  mostrar: boolean = false;
 
-  mostrarNombre() {
-    alert('Has hecho clic en: Snorlax');
+  verPokemon() {
+    this.mostrar = true;
   }
-
 }

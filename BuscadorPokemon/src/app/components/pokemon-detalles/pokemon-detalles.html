@@ -1,0 +1,30 @@
+<div style="padding: 15px; border: 1px solid #ddd; border-radius: 8px; max-width: 400px; margin-top: 15px; background-color: #fff;">
+  @if (cargando) {
+    <h2> Cargando datos ... espere en línea por favor. </h2>
+  } @else if (pokemonData) {
+
+    <div>
+      <h1 style="text-transform: capitalize;"> {{ pokemonData.name }} </h1>
+      
+      <!-- Carga la imagen oficial o la imagen normal de reserva -->
+      <img [src]="pokemonData.sprites?.other?.['official-artwork']?.front_default || pokemonData.sprites?.front_default" 
+           [alt]="pokemonData.name"
+           width="200"
+           height="200" 
+           style="display: block; margin: 0 auto;">
+
+      <h3> Estadística Base </h3>
+      <ul>
+        @for (stat of pokemonData.stats; track stat.stat.name) {
+          <li><strong> {{ stat.stat.name }}: </strong> {{ stat.base_stat }}</li>
+        }
+      </ul>
+
+      <br>
+      <a routerLink="/listado" style="color: #007bff; text-decoration: none; font-weight: bold;"> Volver a la lista </a>
+
+    </div>
+  } @else {
+    <h2> ¡El Pokémon no fue encontrado! </h2>
+  }
+</div>

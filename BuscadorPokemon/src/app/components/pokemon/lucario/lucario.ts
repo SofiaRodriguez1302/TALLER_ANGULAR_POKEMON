@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './lucario.css'
 })
 export class LucarioComponent {
+  mostrar: boolean = false;
 
-  mostrarNombre() {
-    alert('Has hecho clic en: Lucario');
+  verPokemon() {
+    this.mostrar = true;
   }
-
 }

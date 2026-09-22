@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './garchomp.css'
 })
 export class GarchompComponent {
+  mostrar: boolean = false;
 
-  mostrarNombre() {
-    alert('Has hecho clic en: Garchomp');
+  verPokemon() {
+    this.mostrar = true;
   }
-
 }

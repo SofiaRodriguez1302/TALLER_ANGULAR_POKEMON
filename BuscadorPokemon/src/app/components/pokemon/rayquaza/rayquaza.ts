@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './rayquaza.css'
 })
 export class RayquazaComponent {
+  mostrar: boolean = false;
 
-  mostrarNombre() {
-    alert('Has hecho clic en: Rayquaza');
+  verPokemon() {
+    this.mostrar = true;
   }
-
 }
